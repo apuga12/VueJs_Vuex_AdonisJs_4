@@ -1,0 +1,11 @@
+ADONIS JS
+
+arrancar servidor: adonis serve --dev
+crear migraciones: adonis migration:refresh
+ejecutar seeds: adonis seed (recuerda CTRL + C Windows o CMD + C Mac para detener proceso)
+
+adonis: todos los comandos disponibles
+
+VUEJS 2
+
+arrancar aplicación: npm run dev
