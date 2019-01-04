@@ -1,0 +1,20 @@
+
+
+  ****  Vue2 Vuex   ****
+
+	Página de referencia para instalación:
+	https://github.com/vuejs-templates/webpack
+
+	Instalar Vue:
+		$ sudo npm install -g vue-cli
+
+	Crear proyecto con template básica:
+		 vue init webpack-simple vue-cinema-chema
+	
+	Instalarle sus dependencias:
+	  sudo npm install --save vuex vue-router vue-resource vue-i18n vee-validate vue-blockui jwt-decode vue-tables-2
+	
+	Si hay pedos con la instalación de paquetes y dependencias:
+    $ sudo yarn install 
+  
+  Ejecutar: npm run dev
