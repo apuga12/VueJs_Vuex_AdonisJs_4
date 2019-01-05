@@ -9,12 +9,17 @@
 		$ sudo npm install -g vue-cli
 
 	Crear proyecto con template básica:
-		 vue init webpack-simple vue-cinema-chema
-	
+		 vue init webpack-simple vue-cinema-chema	
 	Instalarle sus dependencias:
-	  sudo npm install --save vuex vue-router vue-resource vue-i18n vee-validate vue-blockui jwt-decode vue-tables-2
-	
+	  sudo npm install --save vuex vue-router vue-resource vue-i18n vee-validate vue-blockui jwt-decode vue-tables-2	
 	Si hay pedos con la instalación de paquetes y dependencias:
-    $ sudo yarn install 
-  
+    $ sudo yarn install   
   Ejecutar: npm run dev
+
+  *** Namespaces: Parametrizar (tipos, acciones, mutaciones, getters)
+   - Para generar los tipos de los módulos de nuestra app
+   - Separar namespaces por módulos (auth, compras, reservas, etc)
+   - Se configura en el archivo /src/utils/namespace.js
+   *** Se genera el archivo: /src/types/global.js => para la store global
+    - Hacer el import de del namespace.js recién definido:
+      import namespace from '@/utils/namespace';
