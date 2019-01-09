@@ -11,7 +11,7 @@ export default namespace('global', {
 	],
 	mutations: [  // Para mapear resultados de salida:
 		'startProcessing',  // Iniciar a procesar alguna petición
-		'stopProcessing'  // Detener el proceso alguna petición
+		'stopProcessing',  // Detener el proceso alguna petición
 		'setLanguage'  // Para cambiar el lenguaje
 	]
 } );

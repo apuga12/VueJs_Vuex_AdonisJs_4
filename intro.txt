@@ -1,4 +1,9 @@
 
+Otro curso en línea Vuex:
+https://wmedia.teachable.com/courses/140226/lectures/2276849
+
+Bearer Token Example:
+http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-basicos/ 
 
   ****  Vue2 Vuex   ****
 
@@ -21,5 +26,83 @@
    - Separar namespaces por módulos (auth, compras, reservas, etc)
    - Se configura en el archivo /src/utils/namespace.js
    *** Se genera el archivo: /src/types/global.js => para la store global
+    * Se genera un archivo types por cada módulo de la App (global.js, auth.js, cinema.js....etc)
     - Hacer el import de del namespace.js recién definido:
       import namespace from '@/utils/namespace';
+      
+      ****   CONFIG MAIN.js   ****
+   *** VUE Resource: Plugin se define en /src/main.js
+     - Plugin para hacer peticiones HTTP, contra un Endpoint (Configura automáticamente: GET, POST, PUT, DELETE)
+     - Con eso tengo disponible el objeto: Vue.http()...
+     
+   *** VUEX Config: Almacén de datos: Plugin se define en /src/main.js
+     - this.$store.dispatch()
+     - this.$store.commit()
+   
+   *** ALMACEN CENTRAL DATOS: Vuex
+     - Config global de la tienda y a nivel módulos
+     - Ahí se definen las secciones {state, actions, getters, mutations}
+       - A cada action ==> corresponde una mutation
+       - Ejecutar cualquier acción desde cualquier lugar de la App: 
+         store.dispatch(globalTypes.actions.changeLanguage, 'en').then() <=== Invocar main.js y Cambiar idioma
+     - Los módulos: {Auth, Booking, Cinema, Movie} 
+    
+    *** Traducción y validación de forms: Clase 22
+      -  Se copió el archivo /src/translations/index.js
+        Con los valores en inglés y español de los copys a mostrar en la App, dependiendo del lenguaje seleccionado
+      - Archivo /src/validator/es.js y en.js
+        Validaciones en español/inglés para nuestros Forms
+      - en main.js se configura el idioma por default y el cambio del mismo con el action:
+        [globalTypes.actions.changeLanguage]
+     
+     *** Configuración Vue traducciones: Clase 23
+       Cargar todos los mensajes de nuestra App:
+         //- vue traducciones
+				import VueI18n from 'vue-i18n';
+				Vue.use(VueI18n);
+				// cargar archivo /src/translations/index.js
+				import messages from '@/translations';
+				//- Para que utlice las traducciones: 
+				//- Creamos instancia, le pasamos un obj
+				const i18n = new VueI18n({
+					locale: store.state.language,
+					messages
+					//messages: messages  // También debe ser valido
+				});
+				
+		 *** Ejemplo crear nuevo módulo de la App ==> Clase 24
+		   - /src/types/newModule.js  (Types, namespace)
+		   - /src/modules/newModule.js (lógica del negocio)
+		     Ejemplo: /src/modules/auth.js:
+		     *** Para usarse, debe declararse en main.js sección modules{ }
+		       // Inicializar el esqueleto del modulo: {state, actions, getters, mutations}
+						// Y se devuelve en un objeto, para que pueda ser insertado en la globla store
+							const state = {
+
+							};
+							const actions = {
+
+							};
+							const getters = {
+
+							};
+							const mutations = {
+
+							};
+
+							export default {
+								state,
+								actions,
+								getters,
+								mutations
+							};
+			
+		  as
+     
+     
+     
+     
+     
+     
+     
+   
