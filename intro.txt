@@ -70,7 +70,10 @@ http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-ba
 					//messages: messages  // También debe ser valido
 				});
 				
-		 *** Ejemplo crear nuevo módulo de la App ==> Clase 24
+		 *** Ejemplo crear nuevo módulo de la App 
+		   ==> Clase 24: Namespace, Types
+		   ==> Clase 25: Definir getters, state y mutations
+		   ==> Clase 26: Actions para realizar peticiones a la API 
 		   - /src/types/newModule.js  (Types, namespace)
 		   - /src/modules/newModule.js (lógica del negocio)
 		     Ejemplo: /src/modules/auth.js:
@@ -97,7 +100,7 @@ http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-ba
 								mutations
 							};
 			
-		  as
+		  s
      
      
      
