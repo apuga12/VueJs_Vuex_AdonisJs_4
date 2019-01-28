@@ -12,7 +12,81 @@ import Vue from 'vue';  // Para las peticiones HTTP
   };
 
   const actions = {
+  	[types.actions.login]: ({commit}, userInput) => {
+  		// Bloquear pantalla con blockui mientras se procesa la petición
+  		commit(globalTypes.mutations.startProcessing); 
 
+  		// Nueva promesa: Petición POST a login => 
+  		return new Promise((resolve, reject) => {
+  			Vue.http.post('login', {user: userInput})
+  			.then(user => {
+  				// Establecer el token
+  				window.localStorage.setItem('_token', user.body.token);
+  				// Obtengo token y aplico mutation
+  				commit(types.mutations.setUser);
+  				resolve(user);
+  			})
+  			// Capturar posible error en la Promesa...
+  			.catch(error => {
+  				reject(error);
+  			})
+  			.finally(() => {
+  				// Desbloqueo de pantalla
+  				commit(globalTypes.mutations.stopProcessing); 
+  			})
+  		})
+  	},
+
+  	// Action para registrarnos en la App
+  	[types.actions.register]: ({commit}, userInput) => {
+  		commit(globalTypes.mutations.startProcessing);
+  		return new Promise((resolve, reject) => {
+  			Vue.http.post('register', {user: userInput})
+  			.then(user => {
+  				resolve(user);
+  			})
+  			// Capturar posible error en la Promesa...
+  			.catch(error => {
+  				reject(error);
+  			})
+  			.finally(() => {
+  				// Desbloqueo de pantalla
+  				commit(globalTypes.mutations.stopProcessing); 
+  			})
+  		})
+  	}, 
+
+  	[types.actions.updateProfile]: ({commit}, userInput) => {
+  		// Bloquear pantalla con blockui mientras se procesa la petición
+  		commit(globalTypes.mutations.startProcessing); 
+
+  		// Nueva promesa: Petición POST a login => 
+  		return new Promise((resolve, reject) => {
+  			Vue.http.put('profile', {user: userInput})
+  			.then(user => {
+  				// Establecer el token
+  				window.localStorage.setItem('_token', user.body.token);
+  				// Obtengo token y aplico mutation
+  				commit(types.mutations.setUser);
+  				resolve(user);
+  			})
+  			// Capturar posible error en la Promesa...
+  			.catch(error => {
+  				reject(error);
+  			})
+  			.finally(() => {
+  				// Desbloqueo de pantalla
+  				commit(globalTypes.mutations.stopProcessing); 
+  			})
+  		})
+  	},
+
+  	[types.actions.logout]: ({commit}) => {
+  		window.localStorage.removeItem('_token');
+  		// commit(types.mutations.setUser, {user: null});  // Lo forzo a NULL o por validacion:
+  		commit(types.mutations.setUser);
+  	}
+  	// CIERRE: Actions...
   };
 
   const getters = {

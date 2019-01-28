@@ -2,6 +2,12 @@
 Otro curso en línea Vuex:
 https://wmedia.teachable.com/courses/140226/lectures/2276849
 
+Breve explicación VUE, pero shingona:
+http://davidrojas.com.ve/2017/04/05/vue-js/
+
+*** Guía oficial de VUE:
+https://es-vuejs.github.io/vuejs.org/v2/guide/
+
 Bearer Token Example:
 http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-basicos/ 
 
