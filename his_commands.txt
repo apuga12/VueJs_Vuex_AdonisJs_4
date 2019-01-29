@@ -1,0 +1,400 @@
+    1  xinput list
+    2  xrand --output eDP1 --rotate right ; sleep 1; xinput set-prop 13 "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
+    3  sudo apt install xrand
+    4  sudo apt install rand
+    5  xrand --output eDP1 --rotate right ; sleep 1; xinput set-prop 13 "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
+    6  gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+    7  gedit
+    8  gedit &
+    9  gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+   10  gsettings set org.gnome.settings-daemon.plugins.orientation active false
+   11  sudo apt-get install unity-webapps-service
+   12  gedit &
+   13  du -sh /var/cache/apt/archives
+   14  sudo du -sh /var/cache/apt/archives
+   15  sudo apt-get autoclean
+   16  git
+   17  git -version
+   18  java -version
+   19  echo $JAVA_HOME
+   20  sudo gedit ~/.bashrc 
+   21  echo $PATH
+   22  sudo gedit ~/.bash
+   23  mvn
+   24  git --version
+   25  apt-get install git
+   26  sudo apt-get install git
+   27  git --version
+   28  pwd
+   29  mvn
+   30  echo $PATH
+   31  shell
+   32  sh
+   33  who
+   34  whoami
+   35  echo $SHELL
+   36  sudo gedit ~/.bashrc 
+   37  cat gedit ~/.bashrc 
+   38  echo $PATH
+   39  mvn
+   40  mvn -version
+   41  cat gedit ~/.bashrc 
+   42  exit
+   43  netstat -anp | grep 3306
+   44  sudo apt install net-tools
+   45  netstat -anp | grep 3306
+   46  sudo netstat -anp | grep 3306
+   47  ps aux | grep 3306
+   48  cd /etc/
+   49  ls
+   50  cd ~
+   51  cd /etc/mysql/
+   52  cat my.cnf
+   53  mysql -u root -p mysql
+   54  mysql
+   55  sudo mysql
+   56  sudo service mysql start
+   57  ps -fe | grep mysql
+   58  sudo service mysql stop
+   59  ps -fe | grep mysql
+   60  kill -9 1005
+   61  kill -9 5934
+   62  ps -fe | grep mysql
+   63  ps -fea | grep mysql
+   64  kill -9 1005
+   65  sudo kill -9 1005
+   66  ps -fea | grep mysql
+   67  sudo kill -9 5949
+   68  mysql
+   69  sudo mysql
+   70  sudo netstat -tap | grep mysql
+   71  sudo service mysql start
+   72  mysql
+   73  sudo mysql
+   74  mysql -u root -p
+   75  mysql -u root
+   76  sudo mysql -u root
+   77  /etc/init.d/mysqld stop
+   78  service mysqld stop
+   79  service mysql stop
+   80  mysqld_safe --skip-grant-tables &
+   81  sudo mysqld_safe --skip-grant-tables &
+   82  mysql -uroot
+   83  sudo mysql -uroot
+   84  sudo mysql -u root
+   85  clear
+   86  sudo mysql -u root
+   87  service mysql start
+   88  sudo mysql -u root
+   89  cd /etc/
+   90  ls
+   91  cat mysql/
+   92  cd mysql/
+   93  ls
+   94  sudo gedit my.cnf
+   95  sudo service mysqld restart
+   96  service mysql restart
+   97  sudo netstat -tap | grep mysql
+   98  ps -fea | grep mysql
+   99  sudo service mysql start
+  100  ps -fea | grep mysql
+  101  sudo netstat -tap | grep mysql
+  102  clear
+  103  cd ~
+  104  pwd
+  105  sudo apt-get --purge remove mysql-client mysql-server mysql-common
+  106  sudo apt-get autoremov
+  107  sudo apt-get autoremove
+  108  sudo rm -rf /etc/mysql/
+  109  wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+  110  sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+  111  sudo apt update
+  112  sudo apt-get install mysql-server
+  113  sudo netstat -tap | grep mysql
+  114  sudo mysql -u root -p
+  115  sudo netstat -tap | grep mysql
+  116  sudo mysql -u root -p
+  117  gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+  118  gsettings set org.gnome.settings-daemon.plugins.orientation active false
+  119  xrandr -q
+  120  xrandr --output eDP --rotate rigth
+  121  xrandr --output eDP --rotate right
+  122  xrandr --output eDP --rotate left
+  123  xrandr --output eDP --rotate normal
+  124  cd /home/neo/sion/neoWorkspaces/workspace_sts_3.9.5/springbootNinja/springbootNinja
+  125  mvn clean install
+  126  nodejs -v
+  127  cd /home/neo/sion/neoWorkspaces/VueJS/frontend
+  128  ls
+  129  ll
+  130  vue init ssouron/vuestart frontendProject
+  131  npm install -g vue cli
+  132  node -v
+  133  sudo apt update
+  134  npm install -g vue-cli
+  135  sudo apt install npm
+  136  vue init ssouron/vuestart frontendProject
+  137  npm install -g vue-cli
+  138  clear
+  139  sudo npm install -g vue-cli
+  140  vue init ssouron/vuestart frontendProject
+  141  node -v
+  142  cd /home/neo/sion/neoWorkspaces/VueJS/frontend
+  143  ll
+  144  cd frontendVue/
+  145  ll
+  146  cd frontendVue/
+  147  ll
+  148  vue init ssouron/vuestart frontendVue
+  149  ll
+  150  cd ..
+  151  pwd
+  152  cd ../..
+  153  ll
+  154  cd frontend/
+  155  ll
+  156  vue init ssouron/vuestart
+  157  ll
+  158  cd frontendVue/
+  159  ll
+  160  cd frontendVue/
+  161  ll
+  162  npm install
+  163  npm run dev
+  164  clear
+  165  npm run dev
+  166  pwd
+  167  cd /home/neo/sion/sw/node-v10.13.0-linux-x64
+  168  ll
+  169  ./configure
+  170  make
+  171  sudo make install
+  172  sudo apt-get update
+  173  ll
+  174  cd bin
+  175  ll
+  176  npm
+  177  clear
+  178  npm --version
+  179  node --version
+  180  vue --version
+  181  vue -ve
+  182  vue
+  183  vue init ssouron/vuestart frontendVue
+  184  sudo npm install -g vue-cli
+  185  vue --version
+  186  clear
+  187  ll
+  188  adonis
+  189  npm -version
+  190  npm i -g @adonisjs/cli
+  191  adonis
+  192  clear
+  193  sudo npm i -g @adonisjs/cli
+  194  adonis
+  195  adonis -v
+  196  adonis --version
+  197  ll
+  198  clear
+  199  pwd
+  200  ll
+  201  cd sion/
+  202  ll
+  203  cd study/
+  204  ll
+  205  cd Udemy/
+  206  ll
+  207  clear
+  208  ll
+  209  cd VueJs_Vuex_AdonisJs_4/
+  210  ll
+  211  adonis new api-adonisjs4
+  212  adonis serve --dev 
+  213  clear
+  214  ll
+  215  cd api-adonisjs4/
+  216  ll
+  217  cd /home/neo/sion/study/Frontend/Vuejs_JuanAndresNunez
+  218  ll
+  219  gedit 1_vuejs.html
+  220  ll
+  221  cd ..
+  222  ll
+  223  cd VueJs_FabianRodriguez/
+  224  ll
+  225  vue -version
+  226  vue
+  227  ll
+  228  vue create frontend-1
+  229  npm uninstall -g vue-cli
+  230  sudo npm uninstall -g vue-cli
+  231  clear
+  232  sudo npm install -g vue-cli
+  233  vue --version
+  234  vue create frontend-1
+  235  sudo npm uninstall -g vue-cli
+  236  clear
+  237  yarn global add @vue/cli
+  238  sudo yarn global add @vue/cli
+  239  sudo npm i -g vue-cli
+  240  vue --version
+  241  sudo npm uninstall -g vue-cli
+  242  yarn
+  243  clear
+  244  sudo apt-get update && sudo apt-get install yarn
+  245  yarn
+  246  yarn --version
+  247  yarn global add @vue/cli
+  248  sudo yarn global add @vue/cli
+  249  clear
+  250  vue --version
+  251  yarn --version
+  252  yarn
+  253  curl
+  254  sudo apt install curl
+  255  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  256  sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  257  nvm --version
+  258  nvm -v
+  259  node --version
+  260  sudo apt upgrade node
+  261  node --version
+  262  sudo apt-get install --only-upgrade npm
+  263  clear
+  264  node --version
+  265  sudo npm uninstall -g node
+  266  node --version
+  267  vue --version
+  268  vue init webpack frontend1
+  269  cd ..
+  270  ll
+  271  cd VueJs_FabianRodriguez/
+  272  ll
+  273  cd frontend1/
+  274  ll
+  275  npm run serve
+  276  cd ..
+  277  ll
+  278  npm
+  279  npm run serve
+  280  npm install
+  281  ll
+  282  cd frontend1/
+  283  npm install
+  284  npm run dev
+  285  npm run serve
+  286  npm run dev
+  287  pwd
+  288  cd /home/neo/sion/study/Frontend/VueJs_FabianRodriguez/frontend1
+  289  ll
+  290  npm install
+  291  npm run dev
+  292  pwd
+  293  ll
+  294  cd /home/neo/sion/study/Udemy/VueJs_Vuex_AdonisJs_4/api-adonisjs4
+  295  ll
+  296  cd ..
+  297  adonis new api-adonisjs4-chema
+  298  cd api-adonisjs4-chema/
+  299  ll
+  300  clear
+  301  ll
+  302  npm install --save mysql
+  303  pwd
+  304  adonis make:model Cinema --migration
+  305  adonis make:model Room --migration
+  306  adonis make:model Movie --migration
+  307  adonis make:model MovieShowing --migration
+  308  adonis make:model Customer --migration
+  309  adonis make:model MovieShowingTime --migration
+  310  adonis make:model Booking --migration
+  311  adonis make:model Genre --migration
+  312  adonis make:migration GenreMovie
+  313  adonis make:model Seat --migration
+  314  adonis migration:refresh
+  315  clear
+  316  adonis migration:refresh
+  317  cd ~
+  318  pwd
+  319  sudo service mysql stop
+  320  sudo service mysql start
+  321  ps fea|grep mysql
+  322  sudo netstat -tap | grep mysql
+  323  sudo mysql -u root -p
+  324  sudo systemctl enable mysql
+  325  sudo service mysql start
+  326  sudo systemctl enable mysql
+  327  sudo netstat -tap | grep mysql
+  328  sudo mysql -u root -p
+  329  sudo netstat -tap | grep mysql
+  330  sudo service mysql start
+  331  sudo netstat -tap | grep mysql
+  332  clera
+  333  clear
+  334  sudo netstat -tap | grep mysql
+  335  sudo service mysql stop
+  336  sudo netstat -tap | grep mysql
+  337  ps fea|grep mysql
+  338  sudo service mysql stop
+  339  sudo service mysql start
+  340  ps fea|grep mysql
+  341  sudo netstat -tap | grep mysql
+  342  cd /home/neo/sion/study/Udemy/VueJs_Vuex_AdonisJs_4/api-adonisjs4-chema
+  343  ll
+  344  cd start/
+  345  ll
+  346  cd..
+  347  cd ..
+  348  ll
+  349  clear
+  350  sudo netstat -tap | grep mysql
+  351  clear
+  352  sudo netstat -tap | grep mysql
+  353  ps fea|grep mysql
+  354  adonis migration:refresh
+  355  adonis make:seed
+  356  gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+  357  gsettings set org.gnome.settings-daemon.plugins.orientation active false
+  358  xrand -o normal
+  359  xrand
+  360  gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock false
+  361  clear
+  362  gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock false
+  363  gsettings set org.gnome.settings-daemon.plugins.orientation active true
+  364  adonis migration:refresh
+  365  cd /home/neo/sion/study/Udemy/VueJs_Vuex_AdonisJs_4/api-adonisjs4-chema
+  366  adonis migration:refresh
+  367  adonis seed
+  368  ps fea|grep mysql
+  369  sudo netstat -tap | grep mysql
+  370  clear
+  371  sudo netstat -tap | grep mysql
+  372  gedit .gitignore
+  373  ll
+  374  cd vue-cinema-chema/
+  375  ll
+  376  sudo yarn install
+  377  yarn
+  378  ll
+  379  cd ..
+  380  sudo yarn install
+  381  cd vue-cinema-chema/
+  382  clear
+  383  npm run dev
+  384  sudo npm run dev
+  385  clear
+  386  sudo npm install --save vuex vue-router vue-resource vue-i18n vee-validate vue-blockui jwt-decode vue-tables-2
+  387  npm run dev
+  388  clear
+  389  sudo npm run dev
+  390  sudo yarn install
+  391  yarn
+  392  clear
+  393  npm run dev
+  394  clear
+  395  yarn -version
+  396  yarn --version
+  397  cd ..
+  398  history
+  399  ll
+  400  history >> his_commands.txt
