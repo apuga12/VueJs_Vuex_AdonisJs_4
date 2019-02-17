@@ -11,6 +11,119 @@ https://es-vuejs.github.io/vuejs.org/v2/guide/
 Bearer Token Example:
 http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-basicos/ 
 
+ADONIS JS
+
+arrancar servidor: adonis serve --dev
+crear migraciones: adonis migration:refresh
+ejecutar seeds: adonis seed (recuerda CTRL + C Windows o CMD + C Mac para detener proceso)
+
+adonis: todos los comandos disponibles
+
+VUEJS 2
+
+arrancar aplicación: npm run dev
+
+*******************   Actualizar reservaciones BD  ***********************
+
+SELECT * FROM matrix.users; -- OK
+SELECT * FROM matrix.tokens ;
+SELECT * FROM matrix. bookings;
+SELECT * FROM matrix. cinemas;
+SELECT * FROM matrix. customers; -- OK
+SELECT * FROM matrix.genre_movie ;
+SELECT * FROM matrix. genres;
+SELECT * FROM matrix.movies ;
+SELECT * FROM matrix. movie_showings;
+SELECT * FROM matrix. movie_showing_times;
+SELECT * FROM matrix. rooms;
+SELECT * FROM matrix. seats;
+
+UPDATE matrix.movie_showings set movie_show_date = '2019-02-16' where 
+id in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18);
+
+**************************************************************************
+******************   VueJs_Vuex_AdonisJs_4  dic/2018   *******************
+******   Adonis (Backend)  *********
+
+ # Instalar de forma global:
+   sudo npm i -g @adonisjs/cli
+  
+ # Crear aplicación
+   adonis new api-adonisjs4-chema
+ 
+ # cd api-adonisjs4-chema
+   adonis serve --dev   <== Lanza la app en un server, puerto 3333
+ 
+ # En el dir raíz: api-adonisjs4-chema instalar dependencias con NPM
+   npm install --save mysql
+
+ # En config/ shield.js 
+   Se configura la seguridad CSRF, agregando los PATHs permitidos:
+   filterUris: [
+      'api/v1/login',
+ 
+ # /.env ==> Definición de variables de ambiente, Sesión, APP_KEY (Token), Caché, BD...
+ 
+ # config/auth.js ==>  authenticator: 'jwt',  // Configuración de tokens JWT
+ 
+ # Adonis usa knexjs.org para generar modelos de datos - JS
+   Comando para crear tablas ==> Migraciones : 
+     adonis make:model NameTable --migration
+   crear tablas, ahí se deben poblar las columnas de los archivos generados en:
+   database/migrations
+   Crear solo la tabla (en caso de relaciones muchos a muchos):
+     adonis make:migration GenreMovie
+ 
+ # Eliminar y crear de nuevo las migraciones
+   adonis migration:refresh
+ 
+ # Definir constructores para la carga de datos fake: database/factory.js
+ 
+ # Definir las relaciones de los modelos ORL con Lucid/Adonis:
+   Para cada Models/Booking.js, Cinema.js, Customer.js... etc, generado.
+ 
+ # Poblando la BD con datos fake:
+   Se creará archivo Database/DatabaseSeeder.js (Servirá para rellenar la info):
+   adonis make:seed
+ 
+ # Cargando datos:
+   adonis seed
+ 
+ # Rutas GET, POST y PUT con Middleware:  /start/routes.js
+   Definir un grupo de rutas bajo un prefijo api/v1 ==> Indicar que controller atenderán las peticiones
+ 
+ # Generar controladores:
+   adonis make:controller AuthController
+   adonis make:controller CinemaController  
+   *** Elegir HTTP, se generan las carpetas /Controllers/Http/AuthController.js
+   - Todos los métodos inician con async
+
+******   Vue2-Vuex  (Frontend)  *********  
+  
+ # Se basa en componentes (como todos los frameworks javascript actuales: React, Node)
+   - Cada componente está definido por dos secciones que son requeridas: 
+     - DIV / Template
+     - Script vinculado, con secciones definidas (Hace un export default con el nombre-componente): 
+       - DATA: Datos de solo ese componente
+       - Mounted: Hook que se ejecuta cuando el componente es mostrado
+       - Methods: Métodos disponibles dentro del componente
+       - Computed: Variables generadas al vuelo...
+     
+   # Vuex: Almacén de datos tal como Redux, que permite tener toda la info de nuestra App 
+     en un solo árbol, a ese árbol se puede acceder desde cualquier sitio.
+   - Permite envío de info de un lado a otro, ejecutar acciones, acceder a mutaciones, getters, estado
+   - Se puede generar: Store de datos ó módulos.
+   - Las acciones se ejecutan a través de dispatch de vuex y accediendo al store.dispatch 
+     y se ejecutan de forma síncrona.
+   - Al ejecutarse la acción, se espera la respuesta y a partir de ahí se ejecuta una mutación
+     para mapear los datos de salida. (Se establece el estado de la aplicación).
+   - Persistencia ==> Local Storage
+   - Getters: Sirven para devolver la información (transformador de datos).
+   - vue-i18n: Manejo de idiomas (internacionalización del código)
+   - vee-validate: Validación de forms
+   - vue-blockui: Bloqueador de elementos (div, botón, pantalla completa)
+     en pantalla mientras se ejecuta un proceso.
+
   ****  Vue2 Vuex   ****
 
 	Página de referencia para instalación:
@@ -20,10 +133,10 @@ http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-ba
 		$ sudo npm install -g vue-cli
 
 	Crear proyecto con template básica:
-		 vue init webpack-simple vue-cinema-chema	
+	  vue init webpack-simple vue-cinema-chema	
 	Instalarle sus dependencias:
 	  sudo npm install --save vuex vue-router vue-resource vue-i18n vee-validate vue-blockui jwt-decode vue-tables-2	
-	Si hay pedos con la instalación de paquetes y dependencias:
+	***** Si hay pedos con la instalación de paquetes y dependencias: *** Primero instalar YARN
     $ sudo yarn install   
   Ejecutar: npm run dev
 
@@ -36,7 +149,7 @@ http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-ba
     - Hacer el import de del namespace.js recién definido:
       import namespace from '@/utils/namespace';
       
-      ****   CONFIG MAIN.js   ****
+   ************************   CONFIG MAIN.js   ************************
    *** VUE Resource: Plugin se define en /src/main.js
      - Plugin para hacer peticiones HTTP, contra un Endpoint (Configura automáticamente: GET, POST, PUT, DELETE)
      - Con eso tengo disponible el objeto: Vue.http()...
@@ -53,7 +166,7 @@ http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-ba
          store.dispatch(globalTypes.actions.changeLanguage, 'en').then() <=== Invocar main.js y Cambiar idioma
      - Los módulos: {Auth, Booking, Cinema, Movie} 
     
-    *** Traducción y validación de forms: Clase 22
+   *** Traducción y validación de forms: Clase 22
       -  Se copió el archivo /src/translations/index.js
         Con los valores en inglés y español de los copys a mostrar en la App, dependiendo del lenguaje seleccionado
       - Archivo /src/validator/es.js y en.js
@@ -106,7 +219,7 @@ http://www.ingens-networks.com/blog/2015/02/26/oauth-2-bearer-token-conceptos-ba
 								mutations
 							};
 			
-		  s
+   ***
      
      
      
