@@ -1,6 +1,7 @@
-import Vue from 'vue'
+import Vue from 'vue';
 //import App from './App.vue'
-import App from '@/App.vue'
+import App from '@/App.vue';
+import router from '@/router';
 
 // vue resource => Plugin para las HTTP Request
 	import VueResource from 'vue-resource';
@@ -26,6 +27,7 @@ import App from '@/App.vue'
 
 // Modulos y Tipos
 	import globalTypes from '@/types/global';
+	import authModule from '@/modules/auth'
 // .Modulos y Tipos
 
 // vee-validate => Validacion de Forms
@@ -85,7 +87,8 @@ import App from '@/App.vue'
 			}
 		},
 		modules: {
-
+			// Se importan arriba los modulos y aca se inyectan
+			authModule
 		}
 	});
 // .Almacen global de datos con vuex
@@ -107,5 +110,6 @@ new Vue({
   // Agregar Store => Almacen central de datos definido arribass
   store,
   // utilizar las traducciones
-  i18n
+  i18n,
+  router
 })
